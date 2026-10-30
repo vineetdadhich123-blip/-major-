@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickPrint Pro - Commercial Online Printing & Document Delivery Platform</title>
+  <meta name="description" content="Order high-quality commercial document printing online in India. Upload PDFs, DOCX, or images, customize print options with real-time transparent INR pricing, pay with UPI, and receive fast doorstep delivery." />
+  <meta name="keywords" content="online printing india, document delivery, thesis printing, assignment prints, courier printing, A4 print, color prints, spiral binding, upi print order" />
+  <meta property="og:title" content="QuickPrint Pro - Online Printing & Document Delivery Platform" />
+  <meta property="og:description" content="Commercial document printing delivered to your doorstep. Upload files, calculate live INR prices, pay via UPI, and track production status." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header (Sleek Glass Dock)
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="QuickPrint Home">
+        <div class="logo-symbol">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+        </div>
+        <span>QuickPrint</span>
+        <span class="brand-badge">PRO INDIA</span>
+      </a>
+
+      <nav class="nav-tabs" id="nav-menu" aria-label="Main Navigation">
+        <a href="#order-studio-section" class="nav-tab-link active">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>Print Studio</span>
+        </a>
+        <a href="#process-section" class="nav-tab-link">How It Works</a>
+        <a href="#services-section" class="nav-tab-link">Services & Rates</a>
+        <a href="#database-section" class="nav-tab-link" id="nav-tab-database">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+          <span>Database Hub</span>
+        </a>
+        <a href="#contact-section" class="nav-tab-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="db-status-badge connecting" id="db-status-badge" title="Click to view all stored orders and documents in Database Inspector">
+          <span class="status-dot"></span>
+          <span id="db-status-text">Connecting DB...</span>
+          <span class="badge-hint" style="font-size: 0.72rem; opacity: 0.75; margin-left: 2px;">(Inspect)</span>
+        </button>
+        <button type="button" class="btn btn-outline btn-sm" id="btn-nav-track" title="Track or find order by reference number in database">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Track Order</span>
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="btn-nav-order">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>Start Print Job</span>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================================
+         Hero Section - Creative Studio Template
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge-pill">
+            <span class="pulse-indicator"></span>
+            <span>Commercial Laser Print Hub • Same-Day Dispatch Across India</span>
+          </div>
+
+          <h1 class="hero-title">
+            High-Precision Document Printing, <span class="hero-title-gradient">Crafted & Delivered.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Skip physical print shop queues. Upload your assignments, pitch decks, thesis books, or blueprints, configure preferences with transparent live INR pricing, pay securely via UPI, and receive high-speed doorstep delivery.
+          </p>
+
+          <div class="hero-actions-row">
+            <button type="button" class="btn btn-primary btn-lg" id="btn-hero-upload">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span>Upload Documents</span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg" id="btn-hero-services">
+              <span>Explore Rates (from ₹2/pg)</span>
+            </button>
+            <a href="#database-section" class="btn btn-outline btn-lg" id="btn-hero-db" style="text-decoration: none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+              <span>View Database</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics-grid">
+            <div class="metric-item">
+              <span class="metric-number">50,000+</span>
+              <span class="metric-label">Pages Produced</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">₹2.00</span>
+              <span class="metric-label">Starting Rate</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">UPI / QR</span>
+              <span class="metric-label">Instant Payment</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Quality Pass</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <img 
+            src="assets/images/hero_banner.jpg" 
+            alt="QuickPrint automated digital printing and delivery workflow" 
+            class="hero-img" 
+            width="640" 
+            height="400"
+          />
+
+          <div class="hero-floating-card float-left">
+            <div class="float-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="float-text">
+              <strong>Free Doorstep Delivery</strong>
+              <span>Direct from facility to door</span>
+            </div>
+          </div>
+
+          <div class="hero-floating-card float-right">
+            <div class="float-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <div class="float-text">
+              <strong>1200 DPI Laser Precision</strong>
+              <span>Clean text & rich colors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         How It Works (PRD 5.1 & 10.0)
+         ========================================================================= -->
+    <section class="process-section" id="process-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple & Seamless</span>
+          <h2 class="section-title">How QuickPrint Works</h2>
+          <p class="section-subtitle">No long lines. No travel. Submit your documents online in four easy steps.</p>
+        </div>
+
+        <div class="process-steps-grid">
+          <div class="process-step-card">
+            <div class="process-number-circle">1</div>
+            <h3 class="process-title">Upload Documents</h3>
+            <p class="process-desc">Select PDF, DOCX, JPG, or PNG files securely from your phone, laptop, or Google Drive.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-number-circle">2</div>
+            <h3 class="process-title">Set Preferences</h3>
+            <p class="process-desc">Choose Black & White (₹2) or Colour (₹10), A4/A3, paper stock, duplex format, and spiral/thesis binding.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-number-circle">3</div>
+            <h3 class="process-title">UPI / Rupee Payment</h3>
+            <p class="process-desc">View itemized prices in Indian Rupees (₹). Pay seamlessly using UPI, Cards, Net Banking, or Pay on Delivery.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-number-circle">4</div>
+            <h3 class="process-title">Production & Receipt</h3>
+            <p class="process-desc">Your order is printed at our commercial facility. Track status live and print your official GST Tax Invoice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Interactive Order Studio (Core App Workflow)
+         ========================================================================= -->
+    <section class="order-studio-section" id="order-studio-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Order Workspace</span>
+          <h2 class="section-title">Configure & Place Your Print Order</h2>
+          <p class="section-subtitle">Follow the steps below to upload documents, customize options, and calculate live INR prices.</p>
+        </div>
+
+        <!-- Stepper Navigation Header (4 Steps) -->
+        <nav class="stepper-nav-wrapper" aria-label="Order Workflow Progress">
+          <ol class="stepper-list">
+            <li class="stepper-tab active" data-step="1">
+              <span class="step-num-badge">1</span>
+              <div class="step-tab-text">
+                <span class="step-tab-label">Step 1</span>
+                <span class="step-tab-title">Upload Files</span>
+              </div>
+            </li>
+            <li class="stepper-tab disabled" data-step="2">
+              <span class="step-num-badge">2</span>
+              <div class="step-tab-text">
+                <span class="step-tab-label">Step 2</span>
+                <span class="step-tab-title">Preferences</span>
+              </div>
+            </li>
+            <li class="stepper-tab disabled" data-step="3">
+              <span class="step-num-badge">3</span>
+              <div class="step-tab-text">
+                <span class="step-tab-label">Step 3</span>
+                <span class="step-tab-title">Review & Pay</span>
+              </div>
+            </li>
+            <li class="stepper-tab disabled" data-step="4">
+              <span class="step-num-badge">4</span>
+              <div class="step-tab-text">
+                <span class="step-tab-label">Step 4</span>
+                <span class="step-tab-title">Confirmation</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Main Studio Grid -->
+        <div class="studio-grid-layout">
+          <div class="studio-main-card">
+            
+            <!-- STEP 1: UPLOAD DOCUMENTS -->
+            <div class="studio-step-panel active" id="step-upload" data-step="1">
+              <div class="panel-header">
+                <h3 class="panel-title">Upload Your Documents</h3>
+                <p class="panel-desc">Drag and drop your files or select them from your device. Supported formats: PDF, DOCX, JPG, and PNG (up to 25 MB each).</p>
+              </div>
+
+              <!-- Dual Upload Workspace: Desktop Dropzone + Mobile Phone QR Code Direct Upload -->
+              <div class="upload-options-grid">
+                <!-- Option 1: Desktop Dropzone -->
+                <div class="dropzone-area" id="dropzone" tabindex="0" role="region" aria-label="Document upload dropzone">
+                  <input type="file" id="file-input" class="sr-only" multiple accept=".pdf,.docx,.doc,.jpg,.jpeg,.png" />
+                  <div class="dropzone-icon-box">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                  </div>
+                  <h4 class="dropzone-heading">Drag & drop files here, or browse</h4>
+                  <p class="dropzone-subtext">Desktop PDF, DOCX, JPG, and PNG files (up to 25MB)</p>
+                  <button type="button" class="btn btn-outline btn-sm" id="btn-browse-files">
+                    Browse Files
+                  </button>
+                  <div class="dropzone-badges">
+                    <span class="format-tag">PDF</span>
+                    <span class="format-tag">DOCX</span>
+                    <span class="format-tag">JPG / PNG</span>
+                    <span class="format-tag">Max 25MB</span>
+                  </div>
+                </div>
+
+                <!-- Option 2: Mobile QR Code Direct Upload -->
+                <div class="mobile-qr-card" id="mobile-qr-container">
+                  <span class="qr-badge">📱 Mobile Direct Upload</span>
+                  <h4 class="qr-title">Upload via Phone QR</h4>
+                  <p class="qr-desc">Scan with your phone camera to pick files from WhatsApp, camera, or gallery.</p>
+
+                  <div class="qr-code-box">
+                    <div id="qr-loading-spinner" style="font-size: 0.8rem; color: #64748b;">
+                      Generating QR...
+                    </div>
+                    <img id="mobile-qr-img" class="qr-img hidden" alt="Scan QR to upload from phone" width="140" height="140" />
+                  </div>
+
+                  <div class="qr-session-info">
+                    <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 700;">STATION SESSION:</span>
+                    <code id="qr-session-code" class="qr-session-code">CONNECTING...</code>
+                    <span class="qr-status-indicator">
+                      <span class="status-dot online"></span>
+                      <span>Ready for Mobile Files</span>
+                    </span>
+                  </div>
+
+                  <div class="qr-mobile-url-box" id="qr-mobile-url-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 6px 10px; margin: 8px 0; text-align: left;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px;">
+                      <span style="font-size: 0.7rem; color: #cbd5e1; font-weight: 600;">📱 Mobile URL:</span>
+                      <button type="button" id="btn-copy-mobile-url" class="btn btn-secondary btn-xs" style="padding: 1px 6px; font-size: 0.68rem;">📋 Copy</button>
+                    </div>
+                    <a id="qr-mobile-url-link" href="#" target="_blank" style="display: block; color: #a5b4fc; font-family: monospace; font-size: 0.72rem; text-decoration: underline; word-break: break-all; margin-top: 2px;">Detecting URL...</a>
+                    <div style="font-size: 0.65rem; color: #64748b; margin-top: 3px;">💡 Ensure phone is connected to the same Wi-Fi.</div>
+                  </div>
+
+                  <div class="qr-actions">
+                    <a href="/mobile-upload.html" target="_blank" id="btn-open-mobile-uploader" class="btn btn-outline btn-xs" style="text-decoration: none; color: #a5b4fc; border-color: rgba(165, 180, 252, 0.4); font-size: 0.78rem;">
+                      🔗 Open Mobile Page
+                    </a>
+                    <button type="button" id="btn-refresh-qr" class="btn btn-secondary btn-xs" style="font-size: 0.78rem;" title="Generate new session">
+                      🔄 New Session
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Sample Files Bar for Evaluators -->
+              <div class="sample-docs-bar">
+                <span class="sample-bar-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  Quick Test Documents:
+                </span>
+                <button type="button" class="btn-add-sample" data-sample-index="0">+ Computer Science Thesis (34 pgs)</button>
+                <button type="button" class="btn-add-sample" data-sample-index="1">+ Executive Brief (12 pgs)</button>
+                <button type="button" class="btn-add-sample" data-sample-index="2">+ Architectural Plan (6 pgs)</button>
+              </div>
+
+              <!-- Uploaded Files List -->
+              <div class="uploaded-files-container" id="uploaded-files-container">
+                <!-- Injected dynamically by UploadManager -->
+              </div>
+
+              <!-- Panel Actions -->
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-secondary btn-sm" id="btn-clear-files">
+                  Clear All Files
+                </button>
+                <button type="button" class="btn btn-primary" id="btn-to-step-2" data-action="next-step" disabled>
+                  <span>Continue to Preferences</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: PRINTING PREFERENCES -->
+            <div class="studio-step-panel" id="step-preferences" data-step="2">
+              <div class="panel-header">
+                <h3 class="panel-title">Printing Preferences</h3>
+                <p class="panel-desc">Configure color mode, paper specifications, finishing, and quantities in Indian Rupees. Watch the live 3D mockup update in real time.</p>
+              </div>
+
+              <div class="preferences-layout">
+                <div class="preferences-form-col">
+                  
+                  <!-- Color Mode -->
+                  <div class="pref-group">
+                    <label class="pref-label">Color Mode</label>
+                    <div class="pref-options-grid">
+                      <div class="option-card color-mode-card selected" data-value="bw">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Black & White</span>
+                          <span class="option-card-desc">Crisp monochrome laser toner</span>
+                          <span class="option-card-price">₹2.00 / page</span>
+                        </div>
+                      </div>
+                      <div class="option-card color-mode-card" data-value="color">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Full Vibrant Colour</span>
+                          <span class="option-card-desc">Vivid photographic quality</span>
+                          <span class="option-card-price">₹10.00 / page</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Paper Size -->
+                  <div class="pref-group">
+                    <label class="pref-label">Paper Size</label>
+                    <div class="pref-options-grid">
+                      <div class="option-card paper-size-card selected" data-value="a4">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">A4 Standard</span>
+                          <span class="option-card-desc">210 × 297 mm (Standard Document)</span>
+                          <span class="option-card-price">Standard rate</span>
+                        </div>
+                      </div>
+                      <div class="option-card paper-size-card" data-value="a3">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">A3 Large Format</span>
+                          <span class="option-card-desc">297 × 420 mm (Drawings & Posters)</span>
+                          <span class="option-card-price">+80% rate</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Paper Weight / Stock -->
+                  <div class="pref-group">
+                    <label for="paper-weight-select" class="pref-label">Paper Stock / Weight</label>
+                    <select id="paper-weight-select" class="form-control">
+                      <option value="standard-75">75 GSM Standard Office Bond (Included)</option>
+                      <option value="premium-100">100 GSM Premium Bright White (+ ₹1.50 / sheet)</option>
+                      <option value="cardstock-250">250 GSM Heavy Matte Cardstock (+ ₹5.00 / sheet)</option>
+                    </select>
+                  </div>
+
+                  <!-- Print Sides (Duplex) -->
+                  <div class="pref-group">
+                    <label class="pref-label">Print Format</label>
+                    <div class="pref-options-grid">
+                      <div class="option-card sides-card selected" data-value="double">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Double-Sided (Duplex)</span>
+                          <span class="option-card-desc">Eco-friendly, saves paper & weight</span>
+                          <span class="option-card-price">Recommended</span>
+                        </div>
+                      </div>
+                      <div class="option-card sides-card" data-value="single">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Single-Sided</span>
+                          <span class="option-card-desc">One side per sheet</span>
+                          <span class="option-card-price">Standard</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Number of Copies -->
+                  <div class="pref-group">
+                    <label for="copies-input" class="pref-label">Number of Copies</label>
+                    <div class="copies-counter-wrapper">
+                      <button type="button" class="btn-counter" id="btn-copies-minus" aria-label="Decrease copies">−</button>
+                      <input type="number" id="copies-input" min="1" max="500" value="1" class="input-counter" />
+                      <button type="button" class="btn-counter" id="btn-copies-plus" aria-label="Increase copies">+</button>
+                    </div>
+                  </div>
+
+                  <!-- Page Range Selection -->
+                  <div class="pref-group">
+                    <label class="pref-label">Page Selection</label>
+                    <div class="range-radios">
+                      <label class="range-radio-label">
+                        <input type="radio" name="page-range-choice" id="range-all" checked />
+                        <span>Print All Document Pages</span>
+                      </label>
+                      <label class="range-radio-label">
+                        <input type="radio" name="page-range-choice" id="range-custom" />
+                        <span>Custom Page Range</span>
+                      </label>
+                    </div>
+
+                    <div id="custom-range-wrapper" class="hidden">
+                      <label for="custom-range-input" class="sr-only">Enter custom page numbers</label>
+                      <input 
+                        type="text" 
+                        id="custom-range-input" 
+                        class="form-control" 
+                        placeholder="e.g. 1-5, 8, 11-14" 
+                      />
+                      <div class="form-feedback info" id="range-feedback">
+                        Specify page numbers or ranges separated by commas.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Finishing & Binding -->
+                  <div class="pref-group">
+                    <label class="pref-label">Finishing & Binding (Optional)</label>
+                    <div class="pref-options-grid">
+                      <div class="option-card binding-card selected" data-value="none">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">No Binding</span>
+                          <span class="option-card-desc">Loose neatly collated sheets</span>
+                          <span class="option-card-price">₹0.00</span>
+                        </div>
+                      </div>
+                      <div class="option-card binding-card" data-value="staple">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Corner Staple</span>
+                          <span class="option-card-desc">Secure top-left industrial staple</span>
+                          <span class="option-card-price">+₹5.00 / copy</span>
+                        </div>
+                      </div>
+                      <div class="option-card binding-card" data-value="spiral">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Spiral Coil Binding</span>
+                          <span class="option-card-desc">Clear PVC front & black back cover</span>
+                          <span class="option-card-price">+₹45.00 / copy</span>
+                        </div>
+                      </div>
+                      <div class="option-card binding-card" data-value="hardcover">
+                        <div class="option-card-radio"></div>
+                        <div class="option-card-content">
+                          <span class="option-card-title">Hardcover Thesis</span>
+                          <span class="option-card-desc">University gold foil embossed spine</span>
+                          <span class="option-card-price">+₹220.00 / copy</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Lamination -->
+                  <div class="pref-group">
+                    <label for="lamination-select" class="pref-label">Protective Lamination (Optional)</label>
+                    <select id="lamination-select" class="form-control">
+                      <option value="none">No Lamination (₹0.00)</option>
+                      <option value="gloss">Gloss Lamination - Water & Tear Resistant (+ ₹10.00 / sheet)</option>
+                      <option value="matte">Velvet Matte Lamination - Anti-Glare (+ ₹15.00 / sheet)</option>
+                    </select>
+                  </div>
+
+                  <!-- Notes -->
+                  <div class="pref-group">
+                    <label for="print-notes" class="pref-label">Special Printing Instructions (Optional)</label>
+                    <textarea id="print-notes" class="form-control" rows="2" placeholder="e.g. Please leave first page as cover without header"></textarea>
+                  </div>
+
+                </div>
+
+                <!-- 3D Interactive Visual Preview Column -->
+                <div class="visual-preview-column">
+                  <div class="preview-col-title">Live Print Proof</div>
+                  <div class="mockup-stage">
+                    <div class="preview-sheet size-a4 mode-bw" id="preview-mockup-sheet">
+                      <div class="preview-binding-anchor" id="preview-binding-graphic"></div>
+                      <div class="sheet-content">
+                        <div class="mock-line-title"></div>
+                        <div class="mock-line" style="width: 90%;"></div>
+                        <div class="mock-line" style="width: 80%;"></div>
+                        <div class="mock-chart-box">
+                          <div class="mock-bar"></div>
+                          <div class="mock-bar"></div>
+                          <div class="mock-bar"></div>
+                          <div class="mock-bar"></div>
+                        </div>
+                        <div class="mock-line" style="width: 85%;"></div>
+                        <div class="mock-line" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="preview-sheet-badge" id="preview-mockup-badge">A4 • B&W • Double-Sided</span>
+                </div>
+              </div>
+
+              <!-- Panel Actions -->
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-secondary" data-action="prev-step">
+                  Back to Files
+                </button>
+                <button type="button" class="btn btn-primary" data-action="next-step">
+                  <span>Review & Pay</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: REVIEW & PAYMENT (INDIAN RUPEES) -->
+            <div class="studio-step-panel" id="step-checkout" data-step="3">
+              <div class="panel-header">
+                <h3 class="panel-title">Review Order & Complete Payment</h3>
+                <p class="panel-desc">Verify your document manifest, select your preferred payment mode in Indian Rupees (₹), and place your print job.</p>
+              </div>
+
+              <!-- Manifest Overview -->
+              <div class="review-manifest-grid">
+                <div class="review-box">
+                  <div class="review-box-title">Document Manifest</div>
+                  <div id="review-files-list"></div>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-box-title">Print Specifications</div>
+                  <div id="review-preferences-summary"></div>
+                </div>
+              </div>
+
+              <!-- Customer Order Reference (Pickup / Counter Collection - Fast No-Address Checkout) -->
+              <div class="pickup-details-card" id="pickup-details-card">
+                <div class="pickup-card-header">
+                  <div class="pickup-icon-badge">⚡</div>
+                  <div>
+                    <strong style="color: var(--slate-900); font-size: 0.95rem; display: block;">Instant Print Queue & Pickup Reference</strong>
+                    <span style="font-size: 0.8rem; color: var(--slate-500);">No physical address required. Your print job is queued immediately and tracked via instant Reference ID.</span>
+                  </div>
+                </div>
+                <div class="pickup-fields-grid">
+                  <div class="form-group">
+                    <label for="customer-name-quick" class="form-label">Customer Name / Reference (Optional)</label>
+                    <input type="text" id="customer-name-quick" class="form-control" placeholder="e.g. Rahul Sharma" />
+                  </div>
+                  <div class="form-group">
+                    <label for="customer-mobile-quick" class="form-label">Mobile Number for SMS / WhatsApp Pickup Alert (Optional)</label>
+                    <input type="tel" id="customer-mobile-quick" class="form-control" placeholder="+91 98765 43210" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Method Selector (Indian Rupees) -->
+              <div class="payment-method-container">
+                <div class="review-box-title">Payment Method (Indian Rupees)</div>
+                <div class="payment-options-grid">
+                  <div class="payment-option-card selected" data-method="upi">
+                    <div class="payment-radio"></div>
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-content">
+                      <span class="payment-title">UPI (Instant & Zero Fees)</span>
+                      <span class="payment-desc">Google Pay • PhonePe • Paytm • BHIM</span>
+                    </div>
+                    <span class="payment-badge">Fastest</span>
+                  </div>
+
+                  <div class="payment-option-card" data-method="card">
+                    <div class="payment-radio"></div>
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-content">
+                      <span class="payment-title">Credit / Debit Card</span>
+                      <span class="payment-desc">RuPay • Visa • MasterCard • Maestro</span>
+                    </div>
+                  </div>
+
+                  <div class="payment-option-card" data-method="netbanking">
+                    <div class="payment-radio"></div>
+                    <div class="payment-icon">🏦</div>
+                    <div class="payment-content">
+                      <span class="payment-title">Net Banking</span>
+                      <span class="payment-desc">SBI • HDFC • ICICI • Axis & All Major Banks</span>
+                    </div>
+                  </div>
+
+                  <div class="payment-option-card" data-method="cod">
+                    <div class="payment-radio"></div>
+                    <div class="payment-icon">💵</div>
+                    <div class="payment-content">
+                      <span class="payment-title">Pay on Pickup / Delivery</span>
+                      <span class="payment-desc">Cash or QR scan at document collection</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dynamic Payment Inputs -->
+                <div class="payment-dynamic-box" id="payment-details-upi">
+                  <div class="upi-checkout-layout">
+                    <!-- Dynamic UPI QR Scanner Box -->
+                    <div class="upi-qr-card">
+                      <div class="upi-qr-badge">⚡ Instant UPI Scan & Pay</div>
+                      <div class="upi-qr-frame">
+                        <div id="upi-qr-spinner" class="upi-qr-spinner">Generating Live Payment QR...</div>
+                        <img id="upi-payment-qr-img" class="upi-qr-img hidden" alt="Scan with GPay, PhonePe, Paytm, BHIM" width="160" height="160" />
+                      </div>
+                      <div class="upi-amount-badge">
+                        <span>Scan to Pay:</span>
+                        <strong id="upi-qr-amount-display">₹0.00</strong>
+                      </div>
+                      <div class="upi-app-badges">
+                        <span class="upi-chip">Google Pay</span>
+                        <span class="upi-chip">PhonePe</span>
+                        <span class="upi-chip">Paytm</span>
+                        <span class="upi-chip">BHIM</span>
+                        <span class="upi-chip">CRED</span>
+                      </div>
+                      <p class="upi-scan-note">Scan with any UPI app on your mobile phone to pay instantly.</p>
+                      <a id="upi-direct-app-btn" href="#" class="btn btn-secondary btn-xs upi-mobile-pay-btn hidden">
+                        📱 Open UPI App on This Phone
+                      </a>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="upi-or-divider">
+                      <span>OR ENTER VPA / UPI ID</span>
+                    </div>
+
+                    <!-- UPI ID input -->
+                    <div class="upi-vpa-box">
+                      <label for="input-upi-id" class="form-label">Virtual Payment Address (UPI ID)</label>
+                      <input type="text" id="input-upi-id" class="form-control" placeholder="e.g. customer@okhdfcbank" value="student@okhdfcbank" />
+                      <div class="upi-quick-handles">
+                        <span class="quick-handle-label">Quick UPI Handles:</span>
+                        <button type="button" class="upi-handle-btn" data-handle="okhdfcbank">@okhdfcbank</button>
+                        <button type="button" class="upi-handle-btn" data-handle="okicici">@okicici</button>
+                        <button type="button" class="upi-handle-btn" data-handle="paytm">@paytm</button>
+                        <button type="button" class="upi-handle-btn" data-handle="ybl">@ybl</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="payment-dynamic-box hidden" id="payment-details-card">
+                  <div class="card-demo-grid">
+                    <div class="form-group">
+                      <label class="form-label">Card Number</label>
+                      <input type="text" class="form-control" placeholder="4532 •••• •••• 8821" value="4532 9812 7741 8821" readonly />
+                    </div>
+                    <div class="card-meta-row">
+                      <div class="form-group">
+                        <label class="form-label">Expiry</label>
+                        <input type="text" class="form-control" placeholder="MM/YY" value="08/29" readonly />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">CVV</label>
+                        <input type="password" class="form-control" placeholder="•••" value="888" readonly />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="payment-dynamic-box hidden" id="payment-details-netbanking">
+                  <label for="netbanking-select" class="form-label">Select Your Bank</label>
+                  <select id="netbanking-select" class="form-control">
+                    <option value="State Bank of India">State Bank of India (SBI)</option>
+                    <option value="HDFC Bank">HDFC Bank</option>
+                    <option value="ICICI Bank">ICICI Bank</option>
+                    <option value="Axis Bank">Axis Bank</option>
+                    <option value="Punjab National Bank">Punjab National Bank (PNB)</option>
+                    <option value="Bank of Baroda">Bank of Baroda</option>
+                  </select>
+                </div>
+
+                <div class="payment-dynamic-box hidden" id="payment-details-cod">
+                  <p class="cod-notice">
+                    ✓ <strong>Cash / UPI on Delivery:</strong> Keep exact cash ready or scan the delivery agent's UPI QR code upon document handover.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Detailed Price Breakdown in INR -->
+              <div class="price-breakdown-card">
+                <div class="review-box-title">Cost Summary Breakdown (INR)</div>
+                <div id="review-pricing-breakdown"></div>
+              </div>
+
+              <!-- Terms & Agreement Checkbox -->
+              <div class="terms-agreement-row">
+                <input type="checkbox" id="terms-checkbox" style="margin-top: 3px;" />
+                <label for="terms-checkbox" class="terms-label">
+                  I confirm that all uploaded files are legally owned or authorized for reproduction, and the selected printing options are accurate.
+                </label>
+              </div>
+
+              <!-- Panel Actions -->
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-secondary" data-action="prev-step">
+                  Back to Preferences
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" id="btn-submit-order">
+                  <span>Pay & Place Demo Order</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4: ORDER CONFIRMATION & LIVE TRACKING -->
+            <div class="studio-step-panel" id="step-confirmation" data-step="4">
+              <div class="confirmation-card-content">
+                <div class="confirm-success-badge">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+
+                <h3 class="confirm-title">Order Queued for Production!</h3>
+                <p class="confirm-subtitle">Payment verified. Your print job has been placed at our regional commercial production center.</p>
+
+                <div class="order-ref-pill">
+                  <span class="ref-label">Reference Number:</span>
+                  <span class="ref-value" id="confirm-order-id">QP-IN-2026-00000</span>
+                </div>
+
+                <!-- Live Commercial Production Pipeline (5 Industrial Stages) -->
+                <div class="tracking-wrapper">
+                  <div class="tracking-header">
+                    <div class="tracking-title-wrap">
+                      <span class="tracking-title">Live Commercial Production Pipeline</span>
+                      <span class="live-pulse-badge" id="live-pipeline-badge">
+                        <span class="pulse-dot"></span>
+                        <span id="live-pipeline-mode-text">Live Production Active</span>
+                      </span>
+                    </div>
+                    <div class="tracking-controls">
+                      <button type="button" class="btn btn-outline btn-sm" id="btn-toggle-auto-pipeline" title="Pause or Resume Auto Simulation">
+                        <span id="auto-pipeline-icon">⏸</span>
+                        <span id="auto-pipeline-text">Pause Auto-Run</span>
+                      </button>
+                      <button type="button" class="btn btn-outline btn-sm" id="btn-advance-status" title="Advance to next production stage">
+                        ⚡ Next Stage
+                      </button>
+                      <button type="button" class="btn btn-outline btn-sm" id="btn-reset-pipeline" title="Reset pipeline to Stage 1">
+                        ↺ Reset
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="tracking-timeline-grid">
+                    <div class="timeline-track-bg"></div>
+                    <div class="timeline-track-fill" id="timeline-progress-fill" style="width: 0%;"></div>
+
+                    <div class="tracker-step active" data-step-index="1" role="button" tabindex="0" title="Click to view Stage 1: Order Placed">
+                      <div class="tracker-node">1</div>
+                      <span class="tracker-step-title">Order Placed</span>
+                      <span class="tracker-step-timing" id="step-time-1">00:00</span>
+                    </div>
+                    <div class="tracker-step pending" data-step-index="2" role="button" tabindex="0" title="Click to view Stage 2: Pre-Press">
+                      <div class="tracker-node">2</div>
+                      <span class="tracker-step-title">Pre-Press</span>
+                      <span class="tracker-step-timing" id="step-time-2">+00:15</span>
+                    </div>
+                    <div class="tracker-step pending" data-step-index="3" role="button" tabindex="0" title="Click to view Stage 3: Printing">
+                      <div class="tracker-node">3</div>
+                      <span class="tracker-step-title">Printing</span>
+                      <span class="tracker-step-timing" id="step-time-3">+01:30</span>
+                    </div>
+                    <div class="tracker-step pending" data-step-index="4" role="button" tabindex="0" title="Click to view Stage 4: Quality Check">
+                      <div class="tracker-node">4</div>
+                      <span class="tracker-step-title">Quality Check</span>
+                      <span class="tracker-step-timing" id="step-time-4">+02:15</span>
+                    </div>
+                    <div class="tracker-step pending" data-step-index="5" role="button" tabindex="0" title="Click to view Stage 5: Completed">
+                      <div class="tracker-node">5</div>
+                      <span class="tracker-step-title">Completed</span>
+                      <span class="tracker-step-timing" id="step-time-5">Ready</span>
+                    </div>
+                  </div>
+
+                  <div class="tracker-status-box" id="tracker-current-status-text">
+                    <!-- Populated dynamically by confirmation.js -->
+                  </div>
+                </div>
+
+                <!-- Order Confirmation Details -->
+                <div class="confirm-details-grid">
+                  <div class="confirm-details-card">
+                    <div class="confirm-card-heading">Key Timestamps & Total (INR)</div>
+                    <div>Order Placed: <strong id="confirm-order-date">-</strong></div>
+                    <div>Estimated Dispatch: <strong id="confirm-eta-date">-</strong></div>
+                    <div>Total Paid: <strong style="color: #4f46e5; font-size: 1.15rem;" id="confirm-total-amount">₹0.00</strong></div>
+                  </div>
+
+                  <div class="confirm-details-card">
+                    <div class="confirm-card-heading">Production Hub</div>
+                    <div>Facility: <strong>QuickPrint Regional Laser Hub #1</strong></div>
+                    <div>Inspection Status: <span style="color: #10b981; font-weight: 700;">Standard Passed</span></div>
+                    <div>Packaging: <strong>Eco-friendly moisture-barrier sealed sleeve</strong></div>
+                  </div>
+                </div>
+
+                <div class="confirm-details-card" style="margin-bottom: 32px; text-align: left;">
+                  <div class="confirm-card-heading">Documents Printed</div>
+                  <div id="confirm-items-list"></div>
+                </div>
+
+                <!-- Confirmation Actions -->
+                <div class="confirm-actions-row">
+                  <button type="button" class="btn btn-primary btn-lg" id="btn-print-receipt">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                      <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    <span>Download / Print Demo Receipt</span>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-lg" id="btn-start-new-order">
+                    <span>Start Another Print Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sticky Live Price Estimation Sidebar -->
+          <aside class="sticky-pricing-card" aria-label="Order Cost Summary">
+            <div class="sticky-pricing-header">
+              <span class="sticky-pricing-title">Live Cost Estimate</span>
+              <span class="live-price-file-count" style="font-size: 0.82rem; font-weight: 700; color: #4f46e5;">0 documents</span>
+            </div>
+
+            <div class="sticky-price-big live-price-grand-total">₹0.00</div>
+            <div class="sticky-price-subtext">Estimated total including 5% GST in INR</div>
+
+            <div class="live-breakdown-list">
+              <div class="live-breakdown-item">
+                <span>Print Volume:</span>
+                <strong class="live-price-pages">0 pages (0 sheets)</strong>
+              </div>
+              <div class="live-breakdown-item">
+                <span>Base Rate:</span>
+                <strong class="live-price-base-rate">₹2.00 / page</strong>
+              </div>
+              <div class="live-breakdown-item">
+                <span>Print Subtotal:</span>
+                <strong class="live-price-subtotal">₹0.00</strong>
+              </div>
+              <div class="live-breakdown-item">
+                <span>GST (5%):</span>
+                <strong class="live-price-tax">₹0.00</strong>
+              </div>
+              <div class="live-breakdown-item">
+                <span>Courier Dispatch:</span>
+                <strong class="text-free">FREE</strong>
+              </div>
+            </div>
+
+            <div class="demo-pricing-notice">
+              💡 <strong>INR Pricing Model:</strong> Standard B&W prints start at ₹2.00/pg, Full Colour at ₹10.00/pg. All taxes calibrated.
+            </div>
+
+            <div style="font-size: 0.78rem; color: #64748b; line-height: 1.4;">
+              🔒 <strong>Data Privacy:</strong> Documents are encrypted in transit and purged immediately after print queue execution.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Printing Services & Target Audience (PRD 4.0 & 5.1)
+         ========================================================================= -->
+    <section class="services-section" id="services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tailored Solutions</span>
+          <h2 class="section-title">Printing Services for Everyone</h2>
+          <p class="section-subtitle">Whether you are submitting a student assignment or printing 500 company annual reports, QuickPrint delivers perfection.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Students -->
+          <div class="service-card">
+            <div class="service-icon-box" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">For Students</h3>
+            <p class="service-card-desc">Affordable lecture notes, assignments, laboratory manuals, and university-standard hardcover thesis binding from ₹2/page.</p>
+            <div class="service-tags-list">
+              <span class="service-tag-item">Thesis Binding</span>
+              <span class="service-tag-item">Lab Manuals</span>
+              <span class="service-tag-item">Study Notes</span>
+            </div>
+          </div>
+
+          <!-- Professionals -->
+          <div class="service-card">
+            <div class="service-icon-box" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="service-card-title">For Professionals</h3>
+            <p class="service-card-desc">Executive pitch decks, conference reports, client presentations, and contracts printed on crisp 100 GSM paper.</p>
+            <div class="service-tags-list">
+              <span class="service-tag-item">Pitch Decks</span>
+              <span class="service-tag-item">Contracts</span>
+              <span class="service-tag-item">Presentations</span>
+            </div>
+          </div>
+
+          <!-- Businesses -->
+          <div class="service-card">
+            <div class="service-icon-box" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="service-card-title">For Businesses</h3>
+            <p class="service-card-desc">Marketing flyers, product brochures, employee handbooks, architectural blueprints, and bulk invoice runs.</p>
+            <div class="service-tags-list">
+              <span class="service-tag-item">Flyers & Posters</span>
+              <span class="service-tag-item">Blueprints A3</span>
+              <span class="service-tag-item">Corporate Booklets</span>
+            </div>
+          </div>
+
+          <!-- General Customers -->
+          <div class="service-card">
+            <div class="service-icon-box" style="background: linear-gradient(135deg, #10b981, #047857);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-card-title">General Customers</h3>
+            <p class="service-card-desc">Flight boarding passes, legal affidavits, government forms, warranty certificates, and family photo documents.</p>
+            <div class="service-tags-list">
+              <span class="service-tag-item">Tickets & Passes</span>
+              <span class="service-tag-item">Legal Forms</span>
+              <span class="service-tag-item">Certificates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Production Facility & Quality Section (PRD 1.0 & 2.0)
+         ========================================================================= -->
+    <section class="facility-section" id="facility-section">
+      <div class="container facility-grid">
+        <div class="facility-img-box">
+          <img 
+            src="assets/images/quality_facility.jpg" 
+            alt="QuickPrint commercial grade digital printing facility and quality inspection" 
+            class="facility-img" 
+            width="600" 
+            height="400"
+          />
+        </div>
+
+        <div class="facility-info-col">
+          <span class="section-tag">Quality Assurance</span>
+          <h2 class="section-title">Commercial Printing Facility & Guarantee</h2>
+          <p class="section-subtitle">
+            All jobs are processed at dedicated regional production centers outfitted with high-volume industrial laser engines.
+          </p>
+
+          <div class="facility-perks-list">
+            <div class="facility-perk-item">
+              <div class="perk-check">✓</div>
+              <div>
+                <div class="perk-title">1200 DPI Micro-Toner Laser Tech</div>
+                <div class="perk-desc">Ultra-sharp typography, clean vector lines, and consistent color calibration across every run.</div>
+              </div>
+            </div>
+
+            <div class="facility-perk-item">
+              <div class="perk-check">✓</div>
+              <div>
+                <div class="perk-title">Rigorous Pre-Flight Quality Check</div>
+                <div class="perk-desc">Automated inspection verifies page bleed, resolution, and margin alignment before queuing.</div>
+              </div>
+            </div>
+
+            <div class="facility-perk-item">
+              <div class="perk-check">✓</div>
+              <div>
+                <div class="perk-title">Weather-Resistant Sealed Packaging</div>
+                <div class="perk-desc">Orders are sealed inside recyclable moisture-barrier sleeves to guarantee pristine condition upon arrival.</div>
+              </div>
+            </div>
+
+            <div class="facility-perk-item">
+              <div class="perk-check">✓</div>
+              <div>
+                <div class="perk-title">Zero Physical Waiting Time</div>
+                <div class="perk-desc">No more traveling to a crowded stationery shop or waiting in line during exam rush hours.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Production Database Hub (Dual Engine: MongoDB & SQLite SQL)
+         ========================================================================= -->
+    <section class="database-section" id="database-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+            Live Database Architecture (SQL & MongoDB)
+          </span>
+          <h2 class="section-title">Database Management Hub</h2>
+          <p class="section-subtitle">
+            All customer print orders, file uploads, and preferences are saved directly to the database. Inspect real-time records, filter orders, download file manifests, or test the database live below.
+          </p>
+        </div>
+
+        <div class="db-hub-card">
+          <!-- Hub Header with Live Metrics & Quick Actions -->
+          <div class="db-hub-header">
+            <div class="db-hub-metrics-grid">
+              <div class="db-metric-box">
+                <span class="db-metric-label">Active Database Engine</span>
+                <div class="db-metric-value-wrap">
+                  <span class="status-dot online"></span>
+                  <span id="hub-db-engine-name">SQL (SQLite Embedded)</span>
+                </div>
+                <span class="db-metric-hint" id="hub-db-status-hint">Zero-config • WAL Mode • quickprint.db</span>
+              </div>
+
+              <div class="db-metric-box">
+                <span class="db-metric-label">Total Stored Orders</span>
+                <span class="db-metric-value" id="hub-stat-orders">0</span>
+                <span class="db-metric-hint">Persisted in 'orders' table</span>
+              </div>
+
+              <div class="db-metric-box">
+                <span class="db-metric-label">Uploaded Documents</span>
+                <span class="db-metric-value" id="hub-stat-docs">0</span>
+                <span class="db-metric-hint">Stored in /uploads directory</span>
+              </div>
+
+              <div class="db-metric-box">
+                <span class="db-metric-label">Customer Inquiries</span>
+                <span class="db-metric-value" id="hub-stat-contacts">0</span>
+                <span class="db-metric-hint">Support contact submissions</span>
+              </div>
+            </div>
+
+            <div class="db-hub-actions-bar">
+              <button type="button" class="btn btn-outline btn-sm" id="btn-hub-refresh" title="Reload records from server">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                </svg>
+                <span>Sync Live DB</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-hub-seed-demo" title="Insert a realistic demo print order into database">
+                <span>+ Seed Test Order</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-hub-export-json" title="Download all orders and documents as JSON">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Export JSON</span>
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-trigger-db-inspector" id="btn-hub-open-modal" title="Open floating inspector modal">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+                <span>Full-Screen Modal</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Selector -->
+          <div class="db-hub-tabs-row">
+            <button type="button" class="db-hub-tab active" data-hub-tab="orders">
+              <span>📦 Orders Table</span>
+              <span class="tab-count-badge" id="hub-badge-orders">0</span>
+            </button>
+            <button type="button" class="db-hub-tab" data-hub-tab="docs">
+              <span>📄 Uploaded Documents</span>
+              <span class="tab-count-badge" id="hub-badge-docs">0</span>
+            </button>
+            <button type="button" class="db-hub-tab" data-hub-tab="contacts">
+              <span>💬 Customer Inquiries</span>
+              <span class="tab-count-badge" id="hub-badge-contacts">0</span>
+            </button>
+            <button type="button" class="db-hub-tab" data-hub-tab="config">
+              <span>⚙️ Database Architecture</span>
+            </button>
+          </div>
+
+          <!-- Tab Panel 1: Orders -->
+          <div class="db-hub-panel active" id="hub-panel-orders">
+            <div class="db-panel-filter-bar">
+              <div class="db-search-input-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="hub-order-search" class="db-search-input" placeholder="Search orders by Ref ID, customer name, mobile..." />
+              </div>
+              <div class="db-filter-select-wrap">
+                <select id="hub-order-status-filter" class="db-select-filter" aria-label="Filter orders by stage">
+                  <option value="all">All Stages (1 to 5)</option>
+                  <option value="1">Stage 1: Placed</option>
+                  <option value="2">Stage 2: Pre-Press</option>
+                  <option value="3">Stage 3: Printing</option>
+                  <option value="4">Stage 4: Finishing</option>
+                  <option value="5">Stage 5: Completed</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="db-table-responsive">
+              <table class="db-data-table" id="hub-orders-table">
+                <thead>
+                  <tr>
+                    <th>Order Ref</th>
+                    <th>Date & Time</th>
+                    <th>Customer Name</th>
+                    <th>Phone / City</th>
+                    <th>Documents</th>
+                    <th>Total (₹)</th>
+                    <th>Payment Mode</th>
+                    <th>Manufacturing Stage</th>
+                    <th style="text-align: right;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="hub-orders-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab Panel 2: Uploaded Documents -->
+          <div class="db-hub-panel" id="hub-panel-docs" style="display: none;">
+            <div class="db-table-responsive">
+              <table class="db-data-table" id="hub-docs-table">
+                <thead>
+                  <tr>
+                    <th>Icon</th>
+                    <th>Original Filename</th>
+                    <th>Server Storage Name</th>
+                    <th>File Size</th>
+                    <th>Pages</th>
+                    <th>MIME Type</th>
+                    <th>Upload Timestamp</th>
+                    <th style="text-align: right;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="hub-docs-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab Panel 3: Inquiries -->
+          <div class="db-hub-panel" id="hub-panel-contacts" style="display: none;">
+            <div class="db-table-responsive">
+              <table class="db-data-table" id="hub-contacts-table">
+                <thead>
+                  <tr>
+                    <th>Contact Name</th>
+                    <th>Email Address</th>
+                    <th>Subject</th>
+                    <th>Message Snippet</th>
+                    <th>Status</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody id="hub-contacts-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab Panel 4: Database Config & Architecture -->
+          <div class="db-hub-panel" id="hub-panel-config" style="display: none;">
+            <div class="db-config-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+              <div class="db-config-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                <h4 style="color: #0f172a; margin-bottom: 8px; font-weight: 800;">⚡ Active Engine: Embedded SQLite</h4>
+                <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">
+                  Running in <strong>WAL (Write-Ahead-Log) mode</strong> for maximum performance. Stored in <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">quickprint.db</code> in the application root directory. Tables: <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">orders</code>, <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">documents</code>, <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">contacts</code>.
+                </p>
+              </div>
+
+              <div class="db-config-card" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px;">
+                <h4 style="color: #166534; margin-bottom: 8px; font-weight: 800;">🍃 Switch to MongoDB Atlas</h4>
+                <p style="font-size: 0.88rem; color: #15803d; line-height: 1.6;">
+                  To connect MongoDB, simply set your URI in the <code style="background: #dcfce7; padding: 2px 6px; border-radius: 4px;">.env</code> file:
+                </p>
+                <pre style="background: #14532d; color: #bbf7d0; padding: 10px; border-radius: 8px; font-size: 0.8rem; overflow-x: auto; margin-top: 8px;"><code>DB_TYPE=mongodb
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/quickprint</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Frequently Asked Questions (PRD 5.1 & 7.0)
+         ========================================================================= -->
+    <section class="faq-section" id="faq-section">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about uploading, printing preferences, payment, and delivery.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button type="button" class="faq-question">
+              <span>What file formats are currently supported?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              QuickPrint currently supports PDF, Microsoft Word (.docx), JPG, and PNG files up to 25 MB per file. For the highest print accuracy and consistent pagination, we recommend saving your files as PDF before uploading.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>What are the printing rates in Indian Rupees?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Standard Black & White printing starts at ₹2.00 per page, and Full Colour printing is ₹10.00 per page. A3 format is an additional 80%. Spiral coil binding is ₹45.00, and university-standard thesis hardcover binding is ₹220.00. Delivery is completely FREE!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>What payment methods are supported?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              We support instant UPI (Google Pay, PhonePe, Paytm, BHIM), RuPay/Visa/MasterCard Credit & Debit cards, Net Banking across all major Indian banks, and Pay on Delivery / Collection.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Are my uploaded documents secure and private?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Yes. All file transfers are encrypted using TLS 1.3. Once your print order is completed, files are automatically scheduled for permanent deletion from our production servers in compliance with data privacy standards.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Can I print only specific pages from a large document?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Yes! In the Printing Preferences step, select "Custom Page Range" and enter the page numbers or ranges you wish to print (e.g., "1-5, 8, 12-15"). The system will recalculate your page count and INR price instantly.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>How does this version connect to a real backend?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq-icon-arrow">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Version 1.0 establishes the client-side UI, validation, and interaction workflows. The frontend state is architected to seamlessly interface with an Express.js REST API and MongoDB database in Version 2.0 without exposing any database credentials in the browser.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact & Help Section (PRD 5.1 & 7.0)
+         ========================================================================= -->
+    <section class="contact-section" id="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info-col">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Need Help with Your Order?</h2>
+          <p class="section-subtitle">Our customer support and print specialists are ready to help with custom corporate orders, paper consultations, or bulk quotes.</p>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Email Support</div>
+              <div class="contact-card-desc">support@quickprint-demo.app<br />Average response time: &lt; 30 minutes</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Phone & Production Hotline</div>
+              <div class="contact-card-desc">+91 1800-555-PRINT (7746)<br />Monday – Saturday, 8:00 AM – 8:00 PM IST</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Central Production Facility</div>
+              <div class="contact-card-desc">QuickPrint Digital Hub #1, Okhla Phase III, New Delhi 110020</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; color: var(--slate-900);">
+            Send Us a Message
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: 20px;">
+            Have a question or custom volume requirement? Drop us a note below.
+          </p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Aarav Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="aarav@example.in" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="Inquiry about thesis binding options" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-control" rows="3" placeholder="Tell us about your printing requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-title">QuickPrint Pro</div>
+          <p class="footer-brand-desc">
+            The modern online printing platform that makes document submission and doorstep delivery effortless, saving customers time and removing the need for physical store visits.
+          </p>
+          <button type="button" class="future-stack-badge btn-trigger-db-inspector" style="cursor: pointer; border: 1px solid rgba(79, 70, 229, 0.4); text-align: left; background: #eef2ff; color: #4338ca; padding: 6px 12px; border-radius: 6px; font-weight: 700;">
+            🗄️ Full-Stack Active: Node.js • Express • MongoDB & SQL (Open Inspector)
+          </button>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#order-studio-section" class="footer-link">Upload Documents</a></li>
+            <li><a href="#order-studio-section" class="footer-link">Printing Preferences</a></li>
+            <li><a href="#order-studio-section" class="footer-link">Price Calculator</a></li>
+            <li><a href="#order-studio-section" class="footer-link">Track Order</a></li>
+            <li><a href="#" class="footer-link btn-trigger-db-inspector" style="color: #4f46e5; font-weight: 700;">🗄️ View Database Records</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Printing Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services-section" class="footer-link">Student Thesis & Notes</a></li>
+            <li><a href="#services-section" class="footer-link">Executive Reports</a></li>
+            <li><a href="#services-section" class="footer-link">Architectural Blueprints</a></li>
+            <li><a href="#services-section" class="footer-link">Spiral & Hardcover Binding</a></li>
+            <li><a href="#services-section" class="footer-link">Protective Lamination</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Demo Disclaimer</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.6;">
+            QuickPrint Version 1.0 is a frontend demonstration application. All order numbers, prices, and status updates are simulated in client memory. No real monetary transactions or credentials are required.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickPrint Pro India. All rights reserved. Version 1.0 (Frontend Only).</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Printing</a>
+          <a href="#" class="footer-link">GST Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       In-Page Official Tax Invoice & Receipt Modal (Zero Popup Blocker Risk)
+       ========================================================================= -->
+  <div class="receipt-modal-overlay hidden" id="receipt-modal" role="dialog" aria-modal="true" aria-labelledby="receipt-modal-title">
+    <div class="receipt-modal-card">
+      <div class="receipt-modal-header">
+        <div class="modal-title-wrap">
+          <span class="invoice-icon">🧾</span>
+          <h3 id="receipt-modal-title">Official Tax Invoice & Receipt</h3>
+        </div>
+        <button type="button" class="btn-close-receipt modal-close-btn" aria-label="Close invoice">&times;</button>
+      </div>
+      <div class="receipt-modal-body" id="receipt-content-target">
+        <!-- Dynamically populated by ConfirmationManager -->
+      </div>
+      <div class="receipt-modal-footer">
+        <button type="button" class="btn btn-secondary btn-close-receipt">Close</button>
+        <button type="button" class="btn btn-primary" id="btn-modal-direct-print">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print Invoice / Save as PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Order Lookup & Live Database Tracking Modal
+       ========================================================================= -->
+  <div class="receipt-modal-overlay hidden" id="lookup-modal" role="dialog" aria-modal="true" aria-labelledby="lookup-modal-title">
+    <div class="receipt-modal-card" style="max-width: 540px;">
+      <div class="receipt-modal-header">
+        <div class="modal-title-wrap">
+          <span class="invoice-icon">🔍</span>
+          <h3 id="lookup-modal-title">Track Order in Database</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="btn-close-lookup" aria-label="Close track order">&times;</button>
+      </div>
+      <div class="receipt-modal-body" style="padding: 24px;">
+        <p style="font-size: 0.92rem; color: #64748b; margin-bottom: 16px;">
+          Enter your unique QuickPrint reference number (e.g. <code>QP-IN-2026-63230</code>) to query the active database (MongoDB / SQL) for live manufacturing status, proof specs, and invoices.
+        </p>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="lookup-order-input" class="form-label" style="font-weight: 700;">Order Reference Number</label>
+          <input 
+            type="text" 
+            id="lookup-order-input" 
+            class="form-control" 
+            placeholder="e.g. QP-IN-2026-89421" 
+            style="font-family: monospace; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.5px;"
+          />
+        </div>
+        <div class="quick-sample-refs" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+          <span style="font-size: 0.8rem; color: #64748b; align-self: center;">Database hint:</span>
+          <span style="font-size: 0.8rem; background: #eef2ff; color: #4f46e5; padding: 3px 8px; border-radius: 4px; font-family: monospace;">QP-IN-2026-63230</span>
+        </div>
+      </div>
+      <div class="receipt-modal-footer">
+        <button type="button" class="btn btn-primary" id="btn-lookup-submit" style="width: 100%;">
+          <span>Find Order in Database</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Database Inspector & Live Collections Viewer Modal
+       ========================================================================= -->
+  <div class="receipt-modal-overlay hidden" id="db-inspector-modal" role="dialog" aria-modal="true" aria-labelledby="db-inspector-title">
+    <div class="receipt-modal-card db-inspector-card">
+      <div class="receipt-modal-header db-inspector-header">
+        <div class="modal-title-wrap">
+          <span class="invoice-icon">🗄️</span>
+          <div>
+            <h3 id="db-inspector-title" style="margin: 0; font-size: 1.35rem; font-weight: 800;">Database Inspector & Live Records</h3>
+            <span style="font-size: 0.8rem; color: #64748b;">Direct real-time viewer into MongoDB & SQLite database records</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" id="btn-close-db-inspector" aria-label="Close database inspector">&times;</button>
+      </div>
+
+      <div class="db-inspector-summary-bar">
+        <div class="summary-metric-card">
+          <span class="metric-label">Active Database Engine</span>
+          <strong class="metric-val" id="db-card-engine" style="color: #059669;">Loading...</strong>
+          <span class="metric-sub" id="db-card-target">Collection / DB File</span>
+        </div>
+        <div class="summary-metric-card">
+          <span class="metric-label">Stored Orders</span>
+          <strong class="metric-val" id="db-card-orders">0 Records</strong>
+          <span class="metric-sub">Table: orders</span>
+        </div>
+        <div class="summary-metric-card">
+          <span class="metric-label">Uploaded Documents</span>
+          <strong class="metric-val" id="db-card-docs">0 Files</strong>
+          <span class="metric-sub">Directory: ./uploads/</span>
+        </div>
+        <div class="summary-metric-card">
+          <span class="metric-label">Server Uptime</span>
+          <strong class="metric-val" id="db-card-uptime">0s</strong>
+          <span class="metric-sub">Express.js API Node 22</span>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="db-tabs-bar">
+        <button type="button" class="db-tab-btn active" data-tab="orders">
+          <span>📦 Orders Table</span> <span class="tab-count-badge" id="db-tab-count-orders">(0)</span>
+        </button>
+        <button type="button" class="db-tab-btn" data-tab="documents">
+          <span>📄 Uploaded Files</span> <span class="tab-count-badge" id="db-tab-count-docs">(0)</span>
+        </button>
+        <button type="button" class="db-tab-btn" data-tab="contacts">
+          <span>💬 Support Messages</span> <span class="tab-count-badge" id="db-tab-count-contacts">(0)</span>
+        </button>
+        <button type="button" class="db-tab-btn" data-tab="config">
+          <span>⚙️ Database Setup & Switcher</span>
+        </button>
+        <button type="button" class="btn btn-outline btn-xs" id="btn-refresh-db-data" style="margin-left: auto;">
+          🔄 Refresh Live Data
+        </button>
+      </div>
+
+      <!-- Dynamic Content Container -->
+      <div class="db-inspector-body-content" id="db-inspector-content">
+        <!-- Rendered dynamically by DatabaseInspector -->
+      </div>
+
+      <div class="receipt-modal-footer" style="justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8rem; color: #64748b;">
+          💡 <strong>Tip:</strong> All changes made in the print studio persist in your database automatically.
+        </span>
+        <button type="button" class="btn btn-secondary" onclick="document.querySelector('#db-inspector-modal').classList.add('hidden')">
+          Close Inspector
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Application Script Module -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

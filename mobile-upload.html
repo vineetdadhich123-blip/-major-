@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>QuickPrint Pro — Mobile File Uploader</title>
+  <meta name="description" content="Upload documents directly from your phone camera, gallery, or WhatsApp to your desktop print station." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+    }
+    .mobile-header {
+      text-align: center;
+      padding: 20px 0 16px;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #a5b4fc, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+    .brand-subtitle {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+    .session-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(79, 70, 229, 0.2);
+      border: 1px solid rgba(129, 140, 248, 0.4);
+      color: #c7d2fe;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+    .card-box {
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .picker-box {
+      border: 2px dashed #4f46e5;
+      border-radius: 16px;
+      background: rgba(79, 70, 229, 0.08);
+      padding: 28px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 20px;
+    }
+    .picker-box:active {
+      transform: scale(0.98);
+      background: rgba(79, 70, 229, 0.18);
+    }
+    .picker-icon {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .picker-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .picker-hint {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .file-input-hidden {
+      display: none;
+    }
+    .file-list-heading {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+    .files-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+      max-height: 240px;
+      overflow-y: auto;
+    }
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.86rem;
+    }
+    .file-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+    }
+    .file-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+    .file-size {
+      font-size: 0.74rem;
+      color: #64748b;
+    }
+    .btn-remove-file {
+      background: none;
+      border: none;
+      color: #f87171;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .btn-primary-send {
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+      margin-top: auto;
+    }
+    .btn-primary-send:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .btn-primary-send:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+    .success-view {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 2px solid #10b981;
+      color: #10b981;
+      font-size: 2.2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      animation: popBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes popBounce {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .success-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .success-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .btn-more {
+      background: #334155;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .toast-msg {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #ef4444;
+      color: #ffffff;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      display: none;
+      z-index: 100;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="mobile-header">
+    <div class="brand-title">QuickPrint Pro</div>
+    <div class="brand-subtitle">Mobile Document Transfer Hub</div>
+    <div class="session-badge">
+      <span class="status-dot"></span>
+      <span>Connected to Station: <strong id="session-display">QP-SYNC</strong></span>
+    </div>
+  </header>
+
+  <main class="card-box" id="main-uploader-box">
+    <!-- Drop / Tap Area -->
+    <div class="picker-box" id="picker-btn">
+      <span class="picker-icon">📂</span>
+      <h3 class="picker-title">Tap to Choose Files</h3>
+      <p class="picker-hint">PDF, Word, or Photos (Max 25 MB each)</p>
+      <input type="file" id="mobile-file-input" class="file-input-hidden" multiple accept=".pdf,.docx,.doc,.jpg,.jpeg,.png" />
+    </div>
+
+    <!-- Selected Files List -->
+    <div id="files-container" style="display: none; flex-direction: column; flex: 1;">
+      <div class="file-list-heading" id="file-count-label">Selected Documents (0)</div>
+      <ul class="files-list" id="files-list"></ul>
+    </div>
+
+    <!-- Action Button -->
+    <button type="button" class="btn-primary-send" id="btn-send-files" disabled>
+      <span>🚀 Send to Print Station</span>
+    </button>
+  </main>
+
+  <!-- Success View Screen -->
+  <div class="card-box success-view" id="success-box">
+    <div class="success-icon">✓</div>
+    <h2 class="success-title">Transferred to Screen!</h2>
+    <p class="success-desc">
+      Your document(s) have been successfully transferred to your desktop print station. You can now configure paper size, color mode, and binding on the main screen.
+    </p>
+    <button type="button" class="btn-more" id="btn-upload-more">
+      + Transfer More Documents
+    </button>
+  </div>
+
+  <div class="toast-msg" id="toast-el"></div>
+
+  <script>
+    // Parse session ID from URL query ?session=...
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session') || ('QP-' + Math.floor(1000 + Math.random() * 9000));
+    document.querySelector('#session-display').textContent = sessionId;
+
+    let selectedFiles = [];
+
+    const pickerBtn = document.querySelector('#picker-btn');
+    const fileInput = document.querySelector('#mobile-file-input');
+    const filesContainer = document.querySelector('#files-container');
+    const filesList = document.querySelector('#files-list');
+    const fileCountLabel = document.querySelector('#file-count-label');
+    const sendBtn = document.querySelector('#btn-send-files');
+    const mainBox = document.querySelector('#main-uploader-box');
+    const successBox = document.querySelector('#success-box');
+    const uploadMoreBtn = document.querySelector('#btn-upload-more');
+    const toastEl = document.querySelector('#toast-el');
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.style.display = 'block';
+      setTimeout(() => { toastEl.style.display = 'none'; }, 3500);
+    }
+
+    pickerBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files.length > 0) {
+        for (let i = 0; i < e.target.files.length; i++) {
+          const file = e.target.files[i];
+          if (file.size > 25 * 1024 * 1024) {
+            showToast(`"${file.name}" exceeds 25 MB limit!`);
+            continue;
+          }
+          selectedFiles.push(file);
+        }
+        renderFilesList();
+      }
+    });
+
+    function renderFilesList() {
+      if (selectedFiles.length === 0) {
+        filesContainer.style.display = 'none';
+        sendBtn.disabled = true;
+        sendBtn.innerHTML = `<span>🚀 Send to Print Station</span>`;
+        return;
+      }
+
+      filesContainer.style.display = 'flex';
+      sendBtn.disabled = false;
+      sendBtn.innerHTML = `<span>🚀 Send ${selectedFiles.length} File(s) to Station</span>`;
+      fileCountLabel.textContent = `Selected Documents (${selectedFiles.length})`;
+
+      filesList.innerHTML = selectedFiles.map((file, idx) => {
+        const sizeKB = (file.size / 1024).toFixed(1);
+        const isPdf = file.name.toLowerCase().endsWith('.pdf');
+        return `
+          <li class="file-row">
+            <div class="file-info">
+              <span>${isPdf ? '📕' : '📄'}</span>
+              <div>
+                <div class="file-name" title="${file.name}">${file.name}</div>
+                <div class="file-size">${sizeKB} KB</div>
+              </div>
+            </div>
+            <button type="button" class="btn-remove-file" data-idx="${idx}">&times;</button>
+          </li>
+        `;
+      }).join('');
+
+      filesList.querySelectorAll('.btn-remove-file').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.idx, 10);
+          selectedFiles.splice(idx, 1);
+          renderFilesList();
+        });
+      });
+    }
+
+    sendBtn.addEventListener('click', async () => {
+      if (selectedFiles.length === 0) return;
+
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = `<span style="display:inline-block; animation:spin 1s linear infinite;">⏳</span> Transferring to Print Station...`;
+
+      const formData = new FormData();
+      selectedFiles.forEach(file => {
+        formData.append('documents', file);
+      });
+
+      try {
+        const res = await fetch(`/api/v1/uploads?sessionId=${encodeURIComponent(sessionId)}`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.error || `Server responded with ${res.status}`);
+        }
+
+        const data = await res.json();
+        // Show success
+        mainBox.style.display = 'none';
+        successBox.style.display = 'flex';
+        selectedFiles = [];
+        fileInput.value = '';
+      } catch (err) {
+        showToast('Transfer failed: ' + err.message);
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = `<span>🚀 Send to Print Station</span>`;
+      }
+    });
+
+    uploadMoreBtn.addEventListener('click', () => {
+      successBox.style.display = 'none';
+      mainBox.style.display = 'flex';
+      renderFilesList();
+    });
+  </script>
+</body>
+</html>
